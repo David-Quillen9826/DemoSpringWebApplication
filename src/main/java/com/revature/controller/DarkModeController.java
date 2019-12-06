@@ -21,8 +21,8 @@ public class DarkModeController {
 
 	@GetMapping(value="/enable-dark-mode")
 	public String enableDarkMode(Principal principal, Model model) {
-		darkModeService = new DarkModeServiceImpl();
-		darkModeService.enableDarkMode();
+		/*darkModeService = new DarkModeServiceImpl();
+		darkModeService.enableDarkMode();*/
 		model.addAttribute("currentUser", principal.getName());
 		model.addAttribute("todos", todoService.getAllTodos(principal));
 		return "redirect:/todos";
